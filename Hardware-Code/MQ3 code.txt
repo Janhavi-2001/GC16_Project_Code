@@ -1,0 +1,25 @@
+import time
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+
+# define GPIO pins
+MQ_PIN = 7
+
+# set GPIO pin as input
+GPIO.setup(MQ_PIN, GPIO.IN)
+
+# define gas detection threshold
+GAS_THRESHOLD = 500
+
+# loop to read sensor values
+while True:
+    gas_value = GPIO.input(MQ_PIN)
+    
+    if gas_value > GAS_THRESHOLD:
+        print("Gas detected!")
+    else:
+        print("No gas detected.")
+    
+    time.sleep(0.1) # wait for 100ms before reading again

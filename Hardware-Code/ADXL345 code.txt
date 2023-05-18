@@ -1,0 +1,55 @@
+import smbus
+import time
+
+# ADXL345 accelerometer I2C address
+ADXL345_ADDRESS = 0x53
+
+# Register addresses
+POWER_CTL = 0x2D
+DATA_FORMAT = 0x31
+DATAX0 = 0x32
+DATAX1 = 0x33
+DATAY0 = 0x34
+DATAY1 = 0x35
+DATAZ0 = 0x36
+DATAZ1 = 0x37
+
+# Initialize I2C bus
+bus = smbus.SMBus(1)
+
+# Enable measurement mode
+bus.write_byte_data(ADXL345_ADDRESS, POWER_CTL, 0x08)
+
+# Set data format (full resolution, +/- 2g range)
+bus.write_byte_data(ADXL345_ADDRESS, DATA_FORMAT, 0x08)
+
+# Read accelerometer data
+while True:
+    # Read x-axis acceleration
+    x0 = bus.read_byte_data(ADXL345_ADDRESS, DATAX0)
+    x1 = bus.read_byte_data(ADXL345_ADDRESS, DATAX1)
+    x = (x1 << 8) + x0
+    if x > 32767:
+        x -= 65536
+
+    # Read y-axis acceleration
+    y0 = bus.read_byte_data(ADXL345_ADDRESS, DATAY0)
+    y1 = bus.read_byte_data(ADXL345_ADDRESS, DATAY1)
+    y = (y1 << 8) + y0
+    if y > 32767:
+        y -= 65536
+
+    # Read z-axis acceleration
+    z0 = bus.read_byte_data(ADXL345_ADDRESS, DATAZ0)
+    z1 = bus.read_byte_data(ADXL345_ADDRESS, DATAZ1)
+    z = (z1 << 8) + z0
+    if z > 32767:
+        z -= 65536
+
+    # Print accelerometer data
+    print("X = %.2f g" % (x * 0.004))
+    print("Y = %.2f g" % (y * 0.004))
+    print("Z = %.2f g" % (z * 0.004))
+
+    # Wait before reading again
+    time.sleep(0.1)
