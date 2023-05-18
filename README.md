@@ -1,4 +1,4 @@
-# Inattentive Driver Identification Smart System (IDISS)
+# BE Project - Inattentive Driver Identification Smart System (IDISS)
 
 Distracted driving is one of the leading causes of death amongst drivers on the road. This project was undertaken to provide a solution to distracted driving
 by using deep learning and the internet of things. 
