@@ -28,6 +28,9 @@ The IoT module comprises of codes written for the hardware components.
 The deep learning module is integrated with the IoT module through a Raspberry Pi device. The driver code contained in the repository integrates these modules to produce the output in the form of correctly classified actions of the driver with respect to the class labels provided in the dataset. We have used around 2000 static images of drivers as input. The model when run, will classify the driver's actions and produce the classification output in the form of a text file. 
 
 
+
+### Custom Testing
+For additional testing of the model, we have also compiled a custom miniature dataset on which we train the model to perform classification. The dataset contains 21 images, to be classified according to the labels of the State Farm Distracted Driver Dataset. 
 \
 \
 **Group Members:**
