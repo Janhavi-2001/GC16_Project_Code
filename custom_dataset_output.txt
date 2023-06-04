@@ -1,0 +1,21 @@
+Image Image 14.jpg is classified as class c6 - drinking
+Image Image 3.jpg is classified as class c0 - safe driving
+Image Image 9.jpg is classified as class c2 - talking on the phone with right hand
+Image Image 16.jpg is classified as class c7 - reaching behind
+Image Image 20.jpg is classified as class c0 - safe driving
+Image Image 17.jpg is classified as class c0 - safe driving
+Image Image 8.jpg is classified as class c2 - talking on the phone with right hand
+Image Image 13.jpg is classified as class c0 - safe driving
+Image Image 6.jpg is classified as class c0 - safe driving
+Image Image 1.jpg is classified as class c0 - safe driving
+Image Image 18.jpg is classified as class c0 - safe driving
+Image Image 5.jpg is classified as class c2 - talking on the phone with right hand
+Image Image 12.jpg is classified as class c8 - doing hair and makeup
+Image Image 15.jpg is classified as class c0 - safe driving
+Image Image 7.jpg is classified as class c8 - doing hair and makeup
+Image Image 21.jpg is classified as class c0 - safe driving
+Image Image 10.jpg is classified as class c0 - safe driving
+Image Image 11.jpg is classified as class c2 - talking on the phone with right hand
+Image Image 19.jpg is classified as class c0 - safe driving
+Image Image 2.jpg is classified as class c0 - safe driving
+Image Image 4.jpg is classified as class c2 - talking on the phone with right hand
