@@ -15,7 +15,7 @@ For the deep learning module, the following pre-trained models from the Keras li
   - InceptionV3
 
 The implementation results reveal that **ResNet50 is the best performing pre-trained model in terms of training accuracy and validation accuracy**,
-and the model's weights have been saved in the form of a pickle file. This pickle file will be deployed into the IoT module for predicting driver behavior.
+and the model's weights have been saved in the form of a pickle file and an h5 file. This model will be deployed into the IoT module for predicting driver behavior.
 
 
 
@@ -27,11 +27,7 @@ The IoT module comprises of codes written for the hardware components.
 
 The deep learning module is integrated with the IoT module through a Raspberry Pi device. The driver code contained in the repository integrates these modules to produce the output in the form of correctly classified actions of the driver with respect to the class labels provided in the dataset. We have used around 2000 static images of drivers as input. The model when run, will classify the driver's actions and produce the classification output in the form of a text file. 
 
-By using approximation, the predicted classifications have correctly classified around 80 percent of the images provided as input to the system.
 
-
-
-#### **Link to resnet50.pkl file and system input -** [Click here](https://drive.google.com/drive/u/1/folders/10td0d2OsM2sbjkx3mxZ1T8-aWVVHXzxJ)
 \
 \
 **Group Members:**
